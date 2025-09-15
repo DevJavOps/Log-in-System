@@ -8,20 +8,16 @@
 </head>
 <body>
   <div class="container">
-    <h2>Login</h2>
+    <h2>Enter your credentials</h2>
     <form id="loginForm"> 
   <input type="text" id="username" placeholder="Username" required />
   <input type="password" id="password" placeholder="Password" required />
   <button type="submit">Login</button>
     </form>
     <div class="message" id="message"></div>
-    <div style="text-align:center; margin-top:10px; font-size:0.98em; color:#555;">
-      No account? <a href="/register.html" style="color:#007bff; text-decoration:underline;">Create one!</a>
-    </div>
+    <div class="register-prompt">No account? <a href="/register.html" class="register-link">Create one!</a></div>
   </div>
-  <footer style="text-align:center; margin-top:32px; color:#888; font-size:0.95em;">
-    &copy; 2025 DevJavOps. All rights reserved.
-  </footer>
+  <footer class="footer">&copy; 2025 DevJavOps. All rights reserved.</footer>
   <script>
     document.getElementById('loginForm').addEventListener('submit', async function(e) {
       e.preventDefault();
@@ -45,8 +41,7 @@
         }
       }
     });
-    document.getElementById('registerBtn').addEventListener('click', function() {
-      // Removed registerBtn logic
+  // Removed registerBtn logic
   </script>
 </body>
 </html>

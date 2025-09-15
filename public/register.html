@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="container">
-    <h2>Register</h2>
+    <h2>Create an account</h2>
     <form id="registerForm">
       <input type="text" id="username" placeholder="Username" required />
       <input type="password" id="password" placeholder="Password" required />
@@ -17,6 +17,7 @@
     <div class="message" id="message"></div>
     <div class="link"><a href="/index.html">Back to Login</a></div>
   </div>
+  <footer class="footer">&copy; 2025 DevJavOps. All rights reserved.</footer>
   <script>
     document.getElementById('registerForm').addEventListener('submit', async function(e) {
       e.preventDefault();
@@ -28,7 +29,13 @@
         body: JSON.stringify({ username, password })
       });
       const text = await res.text();
-      document.getElementById('message').textContent = text;
+      const messageDiv = document.getElementById('message');
+      messageDiv.textContent = text;
+      if (text === 'User already exists') {
+        messageDiv.classList.add('error-message');
+      } else {
+        messageDiv.classList.remove('error-message');
+      }
     });
   </script>
 </body>

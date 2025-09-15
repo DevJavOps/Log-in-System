@@ -1,3 +1,25 @@
+.success-message {
+  color: green;
+}
+/* Register prompt styles */
+.register-prompt {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.98em;
+  color: #555;
+}
+.register-link {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  margin-top: 32px;
+  color: #888;
+  font-size: 0.95em;
+}
 body { font-family: Arial, sans-serif; background: #f4f4f4; }
 .container { max-width: 400px; margin: 80px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
 h2 { text-align: center; }
